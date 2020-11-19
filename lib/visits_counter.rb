@@ -1,4 +1,4 @@
-require 'page_view'
+require_relative './page_view'
 
 class VisitsCounter
   def initialize(logs)

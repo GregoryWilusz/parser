@@ -1,5 +1,5 @@
-require 'log_entries_fetcher'
-require 'visits_counter'
+require_relative './log_entries_fetcher'
+require_relative './visits_counter'
 
 class Parser
   def initialize(log_file)

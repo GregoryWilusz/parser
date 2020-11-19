@@ -1,4 +1,4 @@
-require 'log'
+require_relative './log'
 
 class LogEntriesFetcher
   def call(log_file)
