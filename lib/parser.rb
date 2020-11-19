@@ -8,22 +8,32 @@ class Parser
   end
 
   def call
-    puts 'PAGE VIEWS'
-    puts print_page_views_ordered_by_popularity
-    puts 'UNIQUE PAGE VIEWS'
-    puts print_unique_page_views_ordered_by_popularity
+    print_header('PAGE VIEWS')
+    print_page_views_ordered_by_popularity
+    print_separator
+    print_header('UNIQUE PAGE VIEWS')
+    print_unique_page_views_ordered_by_popularity
   end
 
   private
 
   attr_reader :visits_counter
 
+  def print_header(content)
+    puts content
+    print_separator
+  end
+
   def print_page_views_ordered_by_popularity
-    sort(visits_counter.page_views).map(&:print)
+    puts sort(visits_counter.page_views).map(&:print)
+  end
+
+  def print_separator
+    puts
   end
 
   def print_unique_page_views_ordered_by_popularity
-    sort(visits_counter.unique_page_views).map(&:print)
+    puts sort(visits_counter.unique_page_views).map(&:print)
   end
 
   def sort(page_views)
