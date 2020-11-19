@@ -25,6 +25,16 @@ RSpec.describe VisitsCounter do
     end
   end
 
+  describe '#unique_page_views' do
+    it 'returns PageView objects with counted visits per url' do
+      expect(visits_counter.unique_page_views).to match_array [
+         match_page_view('/home', 2),
+         match_page_view('/page/1', 1),
+         match_page_view('/page/2', 1)
+     ]
+    end
+  end
+
   def match_page_view(url, views)
     have_attributes(
       url: url,
