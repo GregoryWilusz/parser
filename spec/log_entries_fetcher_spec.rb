@@ -11,7 +11,9 @@ RSpec.describe LogEntriesFetcher do
         match_log('/home', '111.222.333'),
         match_log('/page/1', '123.123.123'),
         match_log('/home', '123.123.123'),
-        match_log('/page/1', '123.123.123')
+        match_log('/page/1', '123.123.123'),
+        match_log('/page/1', '222.333.444'),
+        match_log('/page/1', '333.444.555')
       ]
     end
   end
