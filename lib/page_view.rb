@@ -5,4 +5,8 @@ class PageView
   end
 
   attr_reader :url, :views
+
+  def print
+    "#{url} #{views} views"
+  end
 end
