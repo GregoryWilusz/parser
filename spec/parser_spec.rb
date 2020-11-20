@@ -10,7 +10,7 @@ RSpec.describe Parser do
   describe '#call' do
     it 'returns page views and unique page views sorted by popularity' do
       expect { parser.call }.to output(
-"PAGE VIEWS
+        "PAGE VIEWS
 
 /page/1 4 views
 /home 2 views

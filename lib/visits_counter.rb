@@ -20,7 +20,7 @@ class VisitsCounter
   def group_visits_by_url(logs)
     logs
       .sort_by(&:url)
-      .chunk { |item| item.url }
-      .map { |url, logs| [url, logs.map(&:ip)] }
+      .chunk(&:url)
+      .map { |url, log_entries| [url, log_entries.map(&:ip)] }
   end
 end

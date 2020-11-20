@@ -18,9 +18,9 @@ RSpec.describe VisitsCounter do
   describe '#page_views' do
     it 'returns PageView objects with counted visits per url' do
       expect(visits_counter.page_views).to match_array [
-         match_page_view('/home', 3),
-         match_page_view('/page/1', 2),
-         match_page_view('/page/2', 1)
+        match_page_view('/home', 3),
+        match_page_view('/page/1', 2),
+        match_page_view('/page/2', 1)
       ]
     end
   end
@@ -28,10 +28,10 @@ RSpec.describe VisitsCounter do
   describe '#unique_page_views' do
     it 'returns PageView objects with counted visits per url' do
       expect(visits_counter.unique_page_views).to match_array [
-         match_page_view('/home', 2),
-         match_page_view('/page/1', 1),
-         match_page_view('/page/2', 1)
-     ]
+        match_page_view('/home', 2),
+        match_page_view('/page/1', 1),
+        match_page_view('/page/2', 1)
+      ]
     end
   end
 
